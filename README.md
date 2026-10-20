@@ -5,6 +5,15 @@ class-incremental learning: a frozen pretrained backbone feeds a ridge-regressio
 head that is updated recursively via Sherman-Morrison-Woodbury, with Simplex-ETF
 regression targets in place of one-hot targets.
 
+## Paper
+
+**An Impossibility Result for ETF Target Geometry, and an Equinorm Remedy for
+Imbalanced Analytic Continual Learning** — Berk Sezer.
+Accepted at the NeurReps 2026 Workshop (Extended Abstract Track), NeurIPS 2026.
+
+- arXiv: [arxiv.org/abs/2610.24844](https://arxiv.org/abs/2610.24844)
+- Citation: see [Citation](#citation) below.
+
 The paper's two headline results:
 
 1. **An impossibility result.** For a ridge head on frozen features, replacing
@@ -145,4 +154,21 @@ src/algpronc/
   engine.py            the task-stream loop; fits every head on identical features
   experiments/exp*.py  the runnable entrypoints above, one per experiment
 tests/               unit tests, including the numerical checks behind the paper's claims
+```
+
+## Citation
+
+If you use this code or build on the paper, please cite:
+
+```bibtex
+@misc{sezer2026impossibilityresultetftarget,
+      title={An Impossibility Result for ETF Target Geometry, and an Equinorm Remedy for Imbalanced Analytic Continual Learning},
+      author={Berk Sezer},
+      year={2026},
+      eprint={2610.24844},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      note={Accepted at the NeurReps 2026 Workshop (Extended Abstract Track), NeurIPS 2026},
+      url={https://arxiv.org/abs/2610.24844},
+}
 ```
